@@ -1,0 +1,90 @@
+/* стили для кастомизации аккордеона */
+
+.accordion-svg {
+  width: 48px;
+  height: 48px;
+}
+
+.ac.is-active > .ac-header .ac-trigger::after {
+  content: "";
+}
+
+.ac .ac-trigger::after {
+  content: "";
+}
+
+.ac-header {
+  display: flex;
+  align-items: center;
+  transition: all ease 0.3s;
+}
+
+.ac .ac-header {
+  height: 56px;
+  padding: 0 16px;
+}
+
+.ac {
+  margin-top: 0;
+  transition: transform ease 0.3s;
+  border: none;
+  border-bottom: 1px solid #00468533;
+}
+
+.ac.is-active #ic_dropdown-arrow {
+  transform: rotate(-180deg);
+  transition: all ease 0.3s;
+}
+
+.ac:not(.is-active) #ic_dropdown-arrow {
+  transform: rotate(0deg);
+  transition: all ease 0.3s;
+}
+
+.ac .ac-panel {
+  transition-duration: 300ms !important;
+}
+
+.ac .ac-trigger {
+  font-family: Semibold;
+  color: #004685;
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+  text-decoration-color: #00468575;
+  padding: 10px 22px 10px 22px;
+}
+
+.ac-header:hover .ac-trigger {
+  color: #569ddc !important;
+}
+
+.ac-header:hover .accordion-svg path {
+  fill: #569ddc !important;
+}
+
+.ac-header:hover #ic_dropdown-arrow path {
+  fill: #569ddc !important;
+}
+
+.ac .ac-panel .ac-text {
+  display: block;
+  font-size: 16px;
+  font-family: Regular;
+  padding: 10px 18px 15px 20px;
+  line-height: 24px;
+}
+
+.ac .ac-panel .indent {
+  margin-top: -12px;
+}
+
+.ac-text-red::first-line {
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-family: Regular;
+  color: red;
+}
+
+#ic_dropdown-arrow {
+  margin-right: 2px;
+}
